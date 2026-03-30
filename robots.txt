@@ -1,0 +1,21 @@
+# Robots.txt for Coryso Studio
+# https://coryso.com/robots.txt
+
+# Allow all search engines to index the site
+User-agent: *
+Allow: /
+
+# Disallow indexing of resource directories
+Disallow: /assets/data/
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Allow favicon and images
+Allow: /favicon.svg
+Allow: /assets/*.svg
+Allow: /assets/*.png
+Allow: /assets/*.jpg
+Allow: /assets/*.webp
+
+# Sitemap location
+Sitemap: https://coryso.com/sitemap.xml

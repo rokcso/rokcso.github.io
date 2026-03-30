@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "name": "Shipstry",
+      "description": "The place where makers showcase their products and early adopters discover what's next.",
+      "link": "https://shipstry.com/",
+      "icon": "🚢",
+      "icon_img": "assets/img/shipstry-icon.svg"
+    },
+    {
+      "name": "Arclet Copier",
+      "description": "A Chrome Extension. Copy URLs with intelligence—clean formatting, instant sharing, zero friction.",
+      "link": "https://arcletcopier.com/",
+      "icon": "🌈",
+      "icon_img": "assets/img/arclet-copier-icon.png"
+    },
+    {
+      "name": "Nookmark",
+      "description": "A Chrome Extension. AI-driven bookmark management that thinks for you—intelligent organization, complete privacy, effortless workflow.",
+      "link": "https://chromewebstore.google.com/detail/glenhnhphcnjcbifcfhphbiijipclgma",
+      "icon": "🔖",
+      "icon_img": "assets/img/nookmark-icon.png"
+    },
+    {
+      "name": "Feishu Document Creator",
+      "description": "A Raycast Extension. Where inspiration meets workflow—create documents instantly, ideas flow seamlessly.",
+      "link": "https://www.raycast.com/rokcso/feishu-document-creator",
+      "icon": "🐦"
+    },
+    {
+      "name": "Hugo Bear Neo",
+      "description": "A Hugo theme. A calm space for your thoughts—minimal design, focused reading, writing that feels natural.",
+      "link": "https://github.com/rokcso/hugo-bearneo",
+      "icon": "🧸"
+    },
+    {
+      "name": "AttriKit",
+      "description": "First-party advertising attribution system with self-hosted deployment. Full data control, 1-hour setup, 80%+ cost savings.",
+      "link": "https://attrikit.com/",
+      "icon": "🎯",
+      "icon_img": "assets/img/attrikit-icon.png"
+    }
+  ]
+}

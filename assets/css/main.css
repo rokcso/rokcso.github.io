@@ -1,0 +1,346 @@
+:root {
+    --text-color: #333;
+    --bg-color: #fefefe;
+    --border-color: #ccc;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #eee;
+        --bg-color: #222;
+        --border-color: #555;
+        --link-color: #8ab4f8;
+        --link-hover-color: #6a9ee8;
+    }
+}
+
+body {
+    font-family:
+        "SF Mono", "Menlo", "Monaco", "Consolas", "Liberation Mono",
+        "Courier New", monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    background-color: var(--bg-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.site-header {
+    text-align: left;
+}
+
+.slogan {
+    font-size: 1.15em;
+    font-weight: normal;
+    color: var(--text-color);
+    opacity: 0.65;
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+    .slogan {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .slogan {
+        font-size: 1.18em;
+    }
+}
+
+@media (max-width: 767px) {
+    .slogan {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .slogan {
+        font-size: 1.05em;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 2.2em;
+        line-height: 1.2;
+    }
+
+    .slogan {
+        font-size: 1em;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .slogan {
+        font-size: 0.95em;
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 1.5em;
+    color: var(--text-color);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section.announcement {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.08), rgba(0, 123, 255, 0.03));
+    border: 1px solid var(--link-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.section.announcement h3 {
+    margin: 0 0 10px 0;
+    color: var(--link-color);
+    font-size: 1.2em;
+}
+
+.section.announcement p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.section.announcement a {
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 5px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--link-color);
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    border-bottom-color: var(--link-hover-color);
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.footer-links a {
+    margin: 0 10px;
+}
+
+.company-address {
+    margin: 12px 0 8px 0;
+    font-size: 0.9em;
+    opacity: 0.5;
+    line-height: 1.4;
+}
+
+.company-address p {
+    margin: 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.product-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-icon {
+    font-size: 1.6em;
+    margin-right: 14px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.product-name {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0 0 4px 0;
+    text-align: left;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.product-name.long-title {
+    font-size: 1.15em;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 0 6px 0;
+}
+
+.product-description {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    color: var(--text-color);
+}
+
+.product-link a {
+    color: var(--link-color);
+    text-decoration: none;
+    border: 1px solid var(--link-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: all 0.2s ease-in-out;
+}
+
+.product-link a:hover {
+    color: var(--bg-color);
+    background-color: var(--link-color);
+    border-color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Graveyard Styles */
+.graveyard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tombstone-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+.tombstone-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.tombstone-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 14px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tombstone-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.tombstone-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.tombstone-name {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0 0 4px 0;
+    text-align: left;
+    line-height: 1.3;
+}
+
+.tombstone-description {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+.tombstone-epitaph {
+    opacity: 0.8;
+    margin: 12px 0;
+}
+
+.tombstone-archive {
+    margin-top: 8px;
+    font-size: 0.9em;
+}

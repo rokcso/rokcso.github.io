@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "name": "Oregex",
+      "description": "An online toolkit for regular expressions — test, debug, and master patterns.",
+      "epitaph": "Patterns tested, lessons learned."
+    },
+    {
+      "name": "Oh My Nav",
+      "description": "A navigation directory for navigation sites. Navigational Inception.",
+      "epitaph": "Too many layers. Time to simplify."
+    },
+    {
+      "name": "Z-lib One",
+      "description": "A Z-Library directory with real-time updates of the latest official accessible URLs.",
+      "epitaph": "Grateful for every reader served."
+    },
+    {
+      "name": "Skillix",
+      "description": "Your curated gateway to Xiaobot.net's finest columns — discover, explore, grow.",
+      "epitaph": "Curating knowledge, one column at a time.",
+      "icon_img": "assets/img/skillix-icon.png"
+    },
+    {
+      "name": "URLxcode",
+      "description": "A collection of URL online tools for encoding, decoding, parameter parsing, and JSON conversion.",
+      "epitaph": "Built as a learning exercise. Discontinued, yet a private version survives.",
+      "link": "https://github.com/rokcso/NextURLxcode",
+      "icon_img": "assets/img/urlxcode-icon.png"
+    }
+  ]
+}
