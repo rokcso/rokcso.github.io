@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coryso Studio - Code with care, build with delight.</title>
+    <meta
+      name="description"
+      content="Coryso Studio is an independent development studio crafting digital products with soul. We build software that solves problems and brings joy to users. Explore our innovative products and development philosophy."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://coryso.com/" />
+    <meta
+      property="og:title"
+      content="Coryso Studio - Code with care, build with delight"
+    />
+    <meta
+      property="og:description"
+      content="Independent development studio crafting digital products with soul. We build software that solves problems and brings joy to users."
+    />
+    <meta property="og:image" content="https://coryso.com/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Coryso Studio - Code with care, build with delight"
+    />
+    <meta property="og:site_name" content="Coryso Studio" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@rokcso" />
+    <meta name="twitter:creator" content="@rokcso" />
+    <meta name="twitter:url" content="https://coryso.com/" />
+    <meta
+      name="twitter:title"
+      content="Coryso Studio - Code with care, build with delight"
+    />
+    <meta
+      name="twitter:description"
+      content="Independent development studio crafting digital products with soul. We build software that solves problems and brings joy to users."
+    />
+    <meta name="twitter:image" content="https://coryso.com/assets/og.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Coryso Studio - Code with care, build with delight"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://coryso.com/" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+    <style>
+      :root {
+        --text-color: #333;
+        --bg-color: #fefefe;
+        --border-color: #ccc;
+        --link-color: #007bff;
+        --link-hover-color: #0056b3;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text-color: #eee;
+          --bg-color: #222;
+          --border-color: #555;
+          --link-color: #8ab4f8;
+          --link-hover-color: #6a9ee8;
+        }
+      }
+
+      body {
+        font-family:
+          "SF Mono", "Menlo", "Monaco", "Consolas", "Liberation Mono",
+          "Courier New", monospace;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+        padding: 40px;
+        border: 1px solid var(--border-color);
+        box-shadow: 4px 4px 0px var(--border-color);
+        background-color: var(--bg-color);
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .site-header {
+        text-align: left;
+      }
+
+      .slogan {
+        font-size: 1.15em;
+        font-weight: normal;
+        color: var(--text-color);
+        opacity: 0.65;
+      }
+
+      /* Responsive Design */
+      @media (min-width: 1024px) {
+        .slogan {
+          font-size: 1.2em;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .slogan {
+          font-size: 1.18em;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .slogan {
+          font-size: 1.1em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .slogan {
+          font-size: 1.05em;
+        }
+      }
+
+      @media (max-width: 360px) {
+        h1 {
+          font-size: 2.2em;
+          line-height: 1.2;
+        }
+
+        .slogan {
+          font-size: 1em;
+          line-height: 1.3;
+        }
+      }
+
+      @media (max-width: 320px) {
+        h1 {
+          font-size: 2em;
+        }
+
+        .slogan {
+          font-size: 0.95em;
+        }
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin: 0;
+        color: var(--text-color);
+      }
+
+      h2 {
+        font-size: 1.5em;
+        color: var(--text-color);
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .section.announcement {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 123, 255, 0.08),
+          rgba(0, 123, 255, 0.03)
+        );
+        border: 1px solid var(--link-color);
+        border-radius: 8px;
+        padding: 20px;
+      }
+
+      .section.announcement h3 {
+        margin: 0 0 10px 0;
+        color: var(--link-color);
+        font-size: 1.2em;
+      }
+
+      .section.announcement p {
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .section.announcement a {
+        font-weight: 500;
+      }
+
+      .section-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        border-bottom: 1px dashed var(--border-color);
+        padding-bottom: 5px;
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        border-bottom: 1px dashed var(--link-color);
+        transition: all 0.2s ease-in-out;
+      }
+
+      a:hover {
+        color: var(--link-hover-color);
+        border-bottom-color: var(--link-hover-color);
+        background-color: rgba(0, 123, 255, 0.1);
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9em;
+        color: var(--text-color);
+      }
+
+      .footer-links a {
+        margin: 0 10px;
+      }
+
+      .company-address {
+        margin: 12px 0 8px 0;
+        font-size: 0.9em;
+        opacity: 0.5;
+        line-height: 1.4;
+      }
+
+      .company-address p {
+        margin: 0;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .product-card {
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 20px;
+        background-color: var(--bg-color);
+      }
+
+      .product-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        text-align: left;
+      }
+
+      .product-content {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .product-icon {
+        font-size: 1.6em;
+        margin-right: 14px;
+        flex-shrink: 0;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .product-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 6px;
+      }
+
+      .product-name {
+        font-size: 1.25em;
+        font-weight: bold;
+        color: var(--text-color);
+        margin: 0 0 4px 0;
+        text-align: left;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .product-name.long-title {
+        font-size: 1.15em;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 0 6px 0;
+      }
+
+      .product-description {
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin-bottom: 18px;
+        color: var(--text-color);
+      }
+
+      .product-link a {
+        color: var(--link-color);
+        text-decoration: none;
+        border: 1px solid var(--link-color);
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .product-link a:hover {
+        color: var(--bg-color);
+        background-color: var(--link-color);
+        border-color: var(--link-color);
+        text-decoration: none;
+      }
+
+      /* Graveyard Styles */
+      .graveyard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .tombstone-card {
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 20px;
+        background-color: var(--bg-color);
+      }
+
+      .tombstone-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .tombstone-icon {
+        width: 36px;
+        height: 36px;
+        margin-right: 14px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .tombstone-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 6px;
+      }
+
+      .tombstone-content {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .tombstone-name {
+        font-size: 1.25em;
+        font-weight: bold;
+        color: var(--text-color);
+        margin: 0 0 4px 0;
+        text-align: left;
+        line-height: 1.3;
+      }
+
+      .tombstone-description {
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        color: var(--text-color);
+      }
+
+      .tombstone-epitaph {
+        opacity: 0.8;
+        margin: 12px 0;
+      }
+
+      .tombstone-archive {
+        margin-top: 8px;
+        font-size: 0.9em;
+      }
+    </style>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Coryso Studio",
+        "alternateName": "Coryso LLC",
+        "url": "https://coryso.com",
+        "logo": "https://coryso.com/favicon.svg",
+        "description": "Independent development studio crafting digital products with soul. We build software that solves problems and brings joy to users.",
+        "email": "hi@coryso.com",
+        "foundingDate": "2024",
+        "slogan": "Code with care, build with delight",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "30 N Gould St Ste N",
+          "addressLocality": "Sheridan",
+          "addressRegion": "WY",
+          "postalCode": "82801",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://rokcso.com",
+          "https://github.com/rokcso",
+          "https://x.com/rokcso"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hi@coryso.com",
+          "contactType": "Customer Service",
+          "availableLanguage": ["English"]
+        }
+      }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Coryso Studio",
+        "url": "https://coryso.com",
+        "description": "Code with care, build with delight",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Coryso Studio",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://coryso.com/favicon.svg"
+          }
+        },
+        "inLanguage": "en"
+      }
+    </script>
+
+    <!-- Structured Data: Products -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "SoftwareApplication",
+            "position": 1,
+            "name": "Arclet Copier",
+            "description": "A Chrome Extension. Quickly copy current page URL with parameter filtering and Markdown formatting support.",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "url": "https://arcletcopier.com/",
+            "image": "https://coryso.com/assets/img/arclet-copier-icon.png",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "creator": {
+              "@type": "Organization",
+              "name": "Coryso Studio"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 2,
+            "name": "Nookmark",
+            "description": "A Chrome Extension. AI-driven bookmark manager with local privacy, lightning-fast performance, and intelligent auto-generated descriptions.",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "url": "https://chromewebstore.google.com/detail/glenhnhphcnjcbifcfhphbiijipclgma",
+            "image": "https://coryso.com/assets/img/nookmark-icon.png",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "creator": {
+              "@type": "Organization",
+              "name": "Coryso Studio"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 3,
+            "name": "Feishu Document Creator",
+            "description": "A Raycast Extension. Create Feishu/Lark online document quickly using native Feishu/Lark URLs.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "url": "https://www.raycast.com/rokcso/feishu-document-creator",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "creator": {
+              "@type": "Organization",
+              "name": "Coryso Studio"
+            }
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "position": 4,
+            "name": "Hugo Bear Neo",
+            "description": "A Hugo theme. A feature-rich Hugo theme ported from Hugo Bear Blog, originally based on ʕ•ᴥ•ʔ Bear Blog, offering upvote buttons, elegant TOC, and UX refinements.",
+            "codeRepository": "https://github.com/rokcso/hugo-bearneo",
+            "programmingLanguage": "HTML",
+            "runtimePlatform": "Hugo",
+            "creator": {
+              "@type": "Organization",
+              "name": "Coryso Studio"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <h1>Coryso Studio</h1>
+        <h2 class="slogan">Code with care, build with delight.</h2>
+      </header>
+
+      <div class="section announcement">
+        <h3>🚀 Shipstry</h3>
+        <p>
+          I just launched
+          <a href="https://shipstry.com/" target="_blank" rel="noopener"
+            >Shipstry</a
+          >
+          — a product ship registry where makers showcase their products and
+          early adopters discover what's next. It's like Product Hunt, but
+          maker-first and community-driven.
+          <a href="https://shipstry.com/" target="_blank" rel="noopener"
+            >Check it out!</a
+          >
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">About Us</div>
+        <p>
+          Coryso Studio is where thoughtful engineering meets human intuition.
+          We build digital tools that work so seamlessly, you'll forget they're
+          even there.
+        </p>
+        <p>
+          Great software doesn't shout—it quietly solves problems, making your
+          workflow smoother and your thinking clearer.
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Our Philosophy</div>
+        <p>
+          <strong>Elegant solutions win.</strong>
+          We strip away complexity until only the essential remains—powerful,
+          intuitive, beautiful.
+        </p>
+        <p>
+          <strong>Details matter.</strong>
+          The difference between good and great often lies in the small choices
+          others overlook.
+        </p>
+        <p>
+          <strong>Build for humans.</strong>
+          Software should understand how people actually think and work, making
+          their lives meaningfully better.
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Products</div>
+        <div class="products-grid">
+          <!-- Products will be dynamically loaded here -->
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Archive</div>
+        <p>
+          Some projects live on, while others have served their time.
+          <a href="https://coryso.com/graveyard">Visit the graveyard →</a>
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Blog & Updates</div>
+        <p>
+          Follow our journey building thoughtful software. We write about
+          development, design decisions, and lessons learned along the way.
+        </p>
+        <p>
+          <a href="https://rokcso.com" target="_blank" rel="noopener noreferrer"
+            >Read the blog ↗</a
+          >
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Contact</div>
+        <p>
+          We read and reply to every genuine email—questions, feedback, ideas,
+          whatever's on your mind. Just please, no spam or unsolicited
+          advertising.
+        </p>
+        <p>Let's start a conversation: <span id="email-contact"></span></p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <a href="https://coryso.com/privacy-policy">Privacy Policy</a>
+        <a href="https://coryso.com/terms-of-service">Terms of Service</a>
+      </div>
+      <p id="copyright"></p>
+      <div class="company-address">
+        <p>30 N Gould St Ste N, Sheridan, WY 82801</p>
+      </div>
+    </footer>
+
+    <script>
+      // Embedded product data
+      const PRODUCTS_DATA = {
+        products: [
+          {
+            name: "Shipstry",
+            description:
+              "The place where makers showcase their products and early adopters discover what's next.",
+            link: "https://shipstry.com/",
+            icon: "🚢",
+            icon_img: "assets/img/shipstry-icon.svg",
+          },
+          {
+            name: "Arclet Copier",
+            description:
+              "A Chrome Extension. Copy URLs with intelligence—clean formatting, instant sharing, zero friction.",
+            link: "https://arcletcopier.com/",
+            icon: "🌈",
+            icon_img: "assets/img/arclet-copier-icon.png",
+          },
+          {
+            name: "Nookmark",
+            description:
+              "A Chrome Extension. AI-driven bookmark management that thinks for you—intelligent organization, complete privacy, effortless workflow.",
+            link: "https://chromewebstore.google.com/detail/glenhnhphcnjcbifcfhphbiijipclgma",
+            icon: "🔖",
+            icon_img: "assets/img/nookmark-icon.png",
+          },
+          {
+            name: "Feishu Document Creator",
+            description:
+              "A Raycast Extension. Where inspiration meets workflow—create documents instantly, ideas flow seamlessly.",
+            link: "https://www.raycast.com/rokcso/feishu-document-creator",
+            icon: "🐦",
+          },
+          {
+            name: "Hugo Bear Neo",
+            description:
+              "A Hugo theme. A calm space for your thoughts—minimal design, focused reading, writing that feels natural.",
+            link: "https://github.com/rokcso/hugo-bearneo",
+            icon: "🧸",
+          },
+          {
+            name: "AttriKit",
+            description:
+              "First-party advertising attribution system with self-hosted deployment. Full data control, 1-hour setup, 80%+ cost savings.",
+            link: "https://attrikit.com/",
+            icon: "🎯",
+            icon_img: "assets/img/attrikit-icon.png",
+          },
+        ],
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const user = "hi";
+        const domain = "coryso.com";
+        const emailElement = document.getElementById("email-contact");
+        if (emailElement) {
+          emailElement.innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+        }
+
+        updateCopyright();
+        loadProducts();
+      });
+
+      function updateCopyright() {
+        const startYear = 2024;
+        const currentYear = new Date().getFullYear();
+        const yearText =
+          currentYear > startYear
+            ? `${startYear}-${currentYear}`
+            : `${startYear}`;
+        const copyrightElement = document.getElementById("copyright");
+        if (copyrightElement) {
+          copyrightElement.textContent = `Copyright © ${yearText}, Coryso LLC. All rights reserved.`;
+        }
+      }
+
+      function loadProducts() {
+        const productsGrid = document.querySelector(".products-grid");
+        if (productsGrid && PRODUCTS_DATA.products) {
+          productsGrid.innerHTML = "";
+          PRODUCTS_DATA.products.forEach((product) => {
+            const productCard = createProductCard(product);
+            productsGrid.appendChild(productCard);
+          });
+        }
+      }
+
+      function createProductCard(product) {
+        const card = document.createElement("div");
+        card.className = "product-card";
+
+        let iconHtml;
+        if (product.icon_img) {
+          iconHtml = `<img src="${product.icon_img}" alt="${product.name} icon">`;
+        } else {
+          iconHtml = product.icon || "📦";
+        }
+
+        const isLongName = product.name.length > 20;
+
+        card.innerHTML = `
+        <div class="product-header">
+            <div class="product-icon">${iconHtml}</div>
+            <div class="product-content">
+                <h3 class="product-name ${isLongName ? "long-title" : ""}">${product.name}</h3>
+            </div>
+        </div>
+        <div class="product-description">${product.description}</div>
+        <div class="product-link">
+            <a href="${product.link}" target="_blank" rel="noopener noreferrer">Learn More</a>
+        </div>
+    `;
+
+        return card;
+      }
+    </script>
+  </body>
+</html>
